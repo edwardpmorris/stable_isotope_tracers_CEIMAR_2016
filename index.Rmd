@@ -17,13 +17,13 @@ font-import : 'https://fonts.googleapis.com/css?family=Fira+Sans'
 font-family : 'Fira Sans'
 
 --- .lightbg
-## Content
+## Unit structure
 
+### Content
 + duration: 3 h teaching session; 1.5 h theory, 1.5 h practice on PC
 + audience: Msc., PhD students and post-docs
 
---- .lightbg
-## Aims
+### Aims
 
 + introduce stable isotope tracer techniques
 + provide important terminology specific to tracers
@@ -32,16 +32,16 @@ font-family : 'Fira Sans'
 + ensure participants can design and analyse stable isotope tracer experiments
 
 --- .lightbg
-## Assessment
+## Unit structure
+### Assessment
 
 + participation in mini excercises during teaching
 + complete excercises on PC
 + grading of students 1 page 'mock' isotope tracer experiment (optional?)
 
---- .lightbg
-## Requirements
+### Requirements
 
-+ familiarity with general stable isotope terminology (see [lectures]())
++ familiarity with general stable isotope terminology (see [lectures](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19911))
 + access to PC with [R](https://cran.r-project.org) and [Rstudio](https://www.rstudio.com/) (try and get Shiny server up and then just a web browser) 
 + a basic idea for a tracer experiment (optional)
 
@@ -50,44 +50,52 @@ font-family : 'Fira Sans'
 
 *** {name: left, span: 6}
 
-+ When natural abundance is not enough...
-    + tracing nutrient cycling
-        + biogeochemistry
-        + foodwebs
-+ Stable isotope tracer specific terminology
-+ Where can I find some help?
-    + Important literature
-    + Forums, groups and software
+When natural abundance is not enough...
+  + tracing nutrient cycling
+
+Stable isotope tracer specific terminology
+
+Where can I find some help?
+  + Important literature
+  + Forums, groups and software
 
 *** {name: right, span: 6}
 
-+ How do I calculate that?
-    + Basic calculations
-    + Using specific software packages
-+ My 'first' stable isotope tracer experimental design
-    + Setting up the basic calculations
-    + Calculating costs
-    + Analysing results
+How do I calculate that?
+  + Basic calculations
+  + Using specific software packages
+
+Design a stable isotope tracer experiment
+  + Setting up the basic calculations
+  + Calculating costs
+  + Analysing results
 
 --- .segue .darkbg
 ## When 'natural abundance' is not enough...
 
---- .lightbg
+--- .lightbg &twocol
 ## Stable isotope tracers
+
+*** {name: left, span: 8}
 
 + Material with a very different isotopic composition.
 + Allows tracing of material through systems.
 + Non-toxic and biodegradable.
 + No special handling or specific permits needed.
 
+*** {name: right, span: 4}
+
+<pw style="text-align:center;"><img alt ="single_C_stable_isotope" src=assets/img/single_C_stable_isotope.png width=300px>
+<br>^13 C stable isotope; 6 protons (light blue) and 7 nuetrons (yellow), difference in atomic weight, but chemically equal. </pw>
+
 --- .lightbg
 ## Stable isotope tracers
 
 Useful for examining the details of flows and processes, for example:
 
-+ ^13 C uptake and fractionation by different photosynthetic organisms.
-+ Nitrogen and carbon assimilation efficiency through food webs.
-+ Nitrification and denitrification in the water column and sediments.
++ Carbon uptake and fractionation by different photosynthetic organisms (see [lecture](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=20605)).
++ Nitrogen and carbon assimilation efficiency through food webs (see [lecture](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19910)).
++ Nitrification and denitrification in the water column and sediments (see [article](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19994)).
 + Whole ecosystem nutrient cycling; pelagic, benthic, wetlands, estuaries, rivers, lakes, aquaculture ponds, chemostats.
 
 --- .lightbg
@@ -98,37 +106,47 @@ include one or two examples of whole ecosystem tracer experiments and the highli
 --- .lightbg
 ## Tracing nutrient cycling - Cadiz Bay
 
-~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae):
+~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae).
 
-+ What role do they play in nutrient cycling?
+<pw style="text-align:center;"><img alt ="Cadiz_Inner_Bay_Macrofitos" src=assets/img/Cadiz_Inner_Bay_Macrofitos.png width=650px>
+<br>Morris et al., FUNDIV, Regional government of Andalucia project of excellence P07-RNM- 2516.</pw>
 
-![Cadiz bay benthic plant coverage]()
-
---- .lightbg
+--- .lightbg &twocol
 ## Tracing nutrient cycling - Cadiz Bay
 
+*** {name: left, span: 6}
 Strong human influence in the region; plenty of N sources.
 
 + Urban and aquaculture effluents are potential 'natural' tracers.
 
-![Cadiz bay anthropogenic pressures]()
+*** {name: right, span: 6}
+<pw style="text-align:center;"><img alt ="pressures_cadiz_bay" src=assets/img/pressures_cadiz_bay.png width=400px>
+<br>Morris et al., FUNDIV, Regional government of Andalucia project of excellence P07-RNM- 2516.</pw>
 
---- .lightbg
+--- .lightbg 
 ## Tracing nutrient cycling - Cadiz Bay
 
 Collecting samples of macrophyte biomass and suspended solids near effluent discharges allows tracing of long-term nutrient loading.
 
-![Morris_et_al_MEPS_2009_fig_]()
+<pw style="text-align:center";><img alt ="fig3_morris_et_al_meps_2009" src=assets/img/fig3_morris_et_al_meps_2009.png width=450px>
+<img alt ="fig5A_morris_et_al_meps_2009" src=assets/img/fig5A_morris_et_al_meps_2009.png width=450px>
+<br>Morris EP., Peralta G., Benavente J., Freitas R., Rodrigues AM., Quintino V., Alvarez O., Valcárcel-Pérez N., Vergara JJ., Hernández I., Pérez-Lloréns JL. 2009. Caulerpa prolifera stable isotope ratios reveal anthropogenic nutrients within a tidal lagoon. Marine Ecology Progress Series 390:117–128, doi: [10.3354/meps08184](https://dx.doi.org/10.3354/meps08184).
+</pw>
 
---- .lightbg
+
+--- .lightbg &twocol
 ## Tracing nutrient cycling - Cadiz Bay
 
-![Morris_et_al_MEPS_2009_fig_]()
+*** {name: left, span: 6}
 
---- .lightbg
-## Tracing nutrient cycling - Cadiz Bay
+Benthic macrophytes give an indication of N loading
 
-![Morris_et_al_MEPS_2009_fig_]()
++ loading highest near discharges in the deepest and highest water velocity regions.
+
+*** {name: right, span: 6}
+<pw style="text-align:center";><img alt ="krigged_d15N_cadiz_bay_2006" src=assets/img/krigged_d15N_cadiz_bay_2006.png width=450px>
+<br>Morris EP., Peralta G., Benavente J., Freitas R., Rodrigues AM., Quintino V., Alvarez O., Valcárcel-Pérez N., Vergara JJ., Hernández I., Pérez-Lloréns JL. 2009. Caulerpa prolifera stable isotope ratios reveal anthropogenic nutrients within a tidal lagoon. Marine Ecology Progress Series 390:117–128, doi: [10.3354/meps08184](https://dx.doi.org/10.3354/meps08184).
+</pw>
 
 --- .lightbg
 ## Tracing nutrient cycling - Natural tracers

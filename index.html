@@ -47,23 +47,19 @@
     <!-- SLIDES -->
     <slide class="lightbg" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Content</h2>
+    <h2>Unit structure</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
+    <h3>Content</h3>
+
+<ul>
 <li>duration: 3 h teaching session; 1.5 h theory, 1.5 h practice on PC</li>
 <li>audience: Msc., PhD students and post-docs</li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-<slide class="lightbg" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>Aims</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
+<h3>Aims</h3>
+
+<ul>
 <li>introduce stable isotope tracer techniques</li>
 <li>provide important terminology specific to tracers</li>
 <li>give sources of important literature and help</li>
@@ -74,27 +70,23 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-3" style="background:;">
+<slide class="lightbg" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Assessment</h2>
+    <h2>Unit structure</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
+    <h3>Assessment</h3>
+
+<ul>
 <li>participation in mini excercises during teaching</li>
 <li>complete excercises on PC</li>
 <li>grading of students 1 page &#39;mock&#39; isotope tracer experiment (optional?)</li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-<slide class="lightbg" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Requirements</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>familiarity with general stable isotope terminology (see <a href="">lectures</a>)</li>
+<h3>Requirements</h3>
+
+<ul>
+<li>familiarity with general stable isotope terminology (see <a href="https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19911">lectures</a>)</li>
 <li>access to PC with <a href="https://cran.r-project.org">R</a> and <a href="https://www.rstudio.com/">Rstudio</a> (try and get Shiny server up and then just a web browser) </li>
 <li>a basic idea for a tracer experiment (optional)</li>
 </ul>
@@ -102,7 +94,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-5" style="background:;">
+<slide class="lightbg" id="slide-3" style="background:;">
   <hgroup>
     <h2>Outline</h2>
   </hgroup>
@@ -110,42 +102,36 @@
     
 <div class='row'>
   <div class='span6'>
-      <ul>
-<li>When natural abundance is not enough...
+      <p>When natural abundance is not enough...</p>
 
 <ul>
-<li>tracing nutrient cycling
+<li>tracing nutrient cycling</li>
+</ul>
 
-<ul>
-<li>biogeochemistry</li>
-<li>foodwebs</li>
-</ul></li>
-</ul></li>
-<li>Stable isotope tracer specific terminology</li>
-<li>Where can I find some help?
+<p>Stable isotope tracer specific terminology</p>
+
+<p>Where can I find some help?</p>
 
 <ul>
 <li>Important literature</li>
 <li>Forums, groups and software</li>
-</ul></li>
 </ul>
 
   </div>
   <div class='span6'>
-      <ul>
-<li>How do I calculate that?
+      <p>How do I calculate that?</p>
 
 <ul>
 <li>Basic calculations</li>
 <li>Using specific software packages</li>
-</ul></li>
-<li>My &#39;first&#39; stable isotope tracer experimental design
+</ul>
+
+<p>Design a stable isotope tracer experiment</p>
 
 <ul>
 <li>Setting up the basic calculations</li>
 <li>Calculating costs</li>
 <li>Analysing results</li>
-</ul></li>
 </ul>
 
   </div>
@@ -153,7 +139,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue darkbg" id="slide-6" style="background:;">
+<slide class="segue darkbg" id="slide-4" style="background:;">
   <hgroup>
     <h2>When &#39;natural abundance&#39; is not enough...</h2>
   </hgroup>
@@ -162,22 +148,32 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-7" style="background:;">
+<slide class="lightbg" id="slide-5" style="background:;">
   <hgroup>
     <h2>Stable isotope tracers</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
+    
+<div class='row'>
+  <div class='span8'>
+      <ul>
 <li>Material with a very different isotopic composition.</li>
 <li>Allows tracing of material through systems.</li>
 <li>Non-toxic and biodegradable.</li>
 <li>No special handling or specific permits needed.</li>
 </ul>
 
+  </div>
+  <div class='span4'>
+      <p><pw style="text-align:center;"><img alt ="single_C_stable_isotope" src=assets/img/single_C_stable_isotope.png width=300px>
+<br><sup>13</sup> C stable isotope; 6 protons (light blue) and 7 nuetrons (yellow), difference in atomic weight, but chemically equal. </pw></p>
+
+  </div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-8" style="background:;">
+<slide class="lightbg" id="slide-6" style="background:;">
   <hgroup>
     <h2>Stable isotope tracers</h2>
   </hgroup>
@@ -185,16 +181,16 @@
     <p>Useful for examining the details of flows and processes, for example:</p>
 
 <ul>
-<li><sup>13</sup> C uptake and fractionation by different photosynthetic organisms.</li>
-<li>Nitrogen and carbon assimilation efficiency through food webs.</li>
-<li>Nitrification and denitrification in the water column and sediments.</li>
+<li>Carbon uptake and fractionation by different photosynthetic organisms (see <a href="https://av02-ext.uca.es/moodle/mod/resource/view.php?id=20605">lecture</a>).</li>
+<li>Nitrogen and carbon assimilation efficiency through food webs (see <a href="https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19910">lecture</a>).</li>
+<li>Nitrification and denitrification in the water column and sediments (see <a href="https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19994">article</a>).</li>
 <li>Whole ecosystem nutrient cycling; pelagic, benthic, wetlands, estuaries, rivers, lakes, aquaculture ponds, chemostats.</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-9" style="background:;">
+<slide class="lightbg" id="slide-7" style="background:;">
   <hgroup>
     <h2>Tracing nutrient cycling - Whole ecosystem approaches</h2>
   </hgroup>
@@ -204,18 +200,54 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
+<slide class="lightbg" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae).</p>
+
+<p><pw style="text-align:center;"><img alt ="Cadiz_Inner_Bay_Macrofitos" src=assets/img/Cadiz_Inner_Bay_Macrofitos.png width=650px>
+<br>Morris et al., FUNDIV, Regional government of Andalucia project of excellence P07-RNM- 2516.</pw></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row'>
+  <div class='span6'>
+      <p>Strong human influence in the region; plenty of N sources.</p>
+
+<ul>
+<li>Urban and aquaculture effluents are potential &#39;natural&#39; tracers.</li>
+</ul>
+
+  </div>
+  <div class='span6'>
+      <p><pw style="text-align:center;"><img alt ="pressures_cadiz_bay" src=assets/img/pressures_cadiz_bay.png width=400px>
+<br>Morris et al., FUNDIV, Regional government of Andalucia project of excellence P07-RNM- 2516.</pw></p>
+
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 <slide class="lightbg" id="slide-10" style="background:;">
   <hgroup>
     <h2>Tracing nutrient cycling - Cadiz Bay</h2>
   </hgroup>
   <article data-timings="">
-    <p>~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae):</p>
+    <p>Collecting samples of macrophyte biomass and suspended solids near effluent discharges allows tracing of long-term nutrient loading.</p>
 
-<ul>
-<li>What role do they play in nutrient cycling?</li>
-</ul>
-
-<p>[Cadiz bay benthic plant coverage]()</p>
+<p><pw style="text-align:center";><img alt ="fig3_morris_et_al_meps_2009" src=assets/img/fig3_morris_et_al_meps_2009.png width=450px>
+<img alt ="fig5A_morris_et_al_meps_2009" src=assets/img/fig5A_morris_et_al_meps_2009.png width=450px>
+<br>Morris EP., Peralta G., Benavente J., Freitas R., Rodrigues AM., Quintino V., Alvarez O., Valcárcel-Pérez N., Vergara JJ., Hernández I., Pérez-Lloréns JL. 2009. Caulerpa prolifera stable isotope ratios reveal anthropogenic nutrients within a tidal lagoon. Marine Ecology Progress Series 390:117–128, doi: <a href="https://dx.doi.org/10.3354/meps08184">10.3354/meps08184</a>.
+</pw></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -225,14 +257,23 @@
     <h2>Tracing nutrient cycling - Cadiz Bay</h2>
   </hgroup>
   <article data-timings="">
-    <p>Strong human influence in the region; plenty of N sources.</p>
+    
+<div class='row'>
+  <div class='span6'>
+      <p>Benthic macrophytes give an indication of N loading</p>
 
 <ul>
-<li>Urban and aquaculture effluents are potential &#39;natural&#39; tracers.</li>
+<li>loading highest near discharges, deepest and high water velocity regions.</li>
 </ul>
 
-<p>[Cadiz bay anthropogenic pressures]()</p>
+  </div>
+  <div class='span6'>
+      <p><pw style="text-align:center";><img alt ="krigged_d15N_cadiz_bay_2006" src=assets/img/krigged_d15N_cadiz_bay_2006.png width=450px>
+<br>Morris EP., Peralta G., Benavente J., Freitas R., Rodrigues AM., Quintino V., Alvarez O., Valcárcel-Pérez N., Vergara JJ., Hernández I., Pérez-Lloréns JL. 2009. Caulerpa prolifera stable isotope ratios reveal anthropogenic nutrients within a tidal lagoon. Marine Ecology Progress Series 390:117–128, doi: <a href="https://dx.doi.org/10.3354/meps08184">10.3354/meps08184</a>.
+</pw></p>
 
+  </div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -241,34 +282,12 @@
     <h2>Tracing nutrient cycling - Cadiz Bay</h2>
   </hgroup>
   <article data-timings="">
-    <p>Collecting samples of macrophyte biomass and suspended solids near effluent discharges allows tracing of long-term nutrient loading.</p>
-
-<p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
+    <p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 <slide class="lightbg" id="slide-13" style="background:;">
-  <hgroup>
-    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-<slide class="lightbg" id="slide-14" style="background:;">
-  <hgroup>
-    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-<slide class="lightbg" id="slide-15" style="background:;">
   <hgroup>
     <h2>Tracing nutrient cycling - Natural tracers</h2>
   </hgroup>
@@ -288,7 +307,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-16" style="background:;">
+<slide class="lightbg" id="slide-14" style="background:;">
   <hgroup>
     <h2>Where to find material with a different isotopic compositions?</h2>
   </hgroup>
@@ -303,7 +322,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-17" style="background:;">
+<slide class="lightbg" id="slide-15" style="background:;">
   <hgroup>
     <h2>Adding stable isotope tracers</h2>
   </hgroup>
@@ -317,7 +336,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue" id="slide-18" style="background:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);;">
+<slide class="segue" id="slide-16" style="background:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);;">
   <hgroup>
     <h2>Questions?</h2>
   </hgroup>
@@ -326,7 +345,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-19" style="background:;">
+<slide class="lightbg" id="slide-17" style="background:;">
   <hgroup>
     <h2>Questions?</h2>
   </hgroup>
@@ -366,7 +385,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-20" style="background:;">
+<slide class="lightbg" id="slide-18" style="background:;">
   <hgroup>
     <h2>Adding stable isotope tracers</h2>
   </hgroup>
@@ -388,7 +407,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-21" style="background:;">
+<slide class="lightbg" id="slide-19" style="background:;">
   <hgroup>
     <h2>Adding stable isotope tracers</h2>
   </hgroup>
@@ -407,7 +426,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-22" style="background:;">
+<slide class="lightbg" id="slide-20" style="background:;">
   <hgroup>
     <h2>Adding stable isotope tracers</h2>
   </hgroup>
@@ -431,7 +450,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-23" style="background:;">
+<slide class="lightbg" id="slide-21" style="background:;">
   <hgroup>
     <h2>Semi-closed system - N uptake of benthic macrophytes in a flume-tank</h2>
   </hgroup>
@@ -440,7 +459,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-24" style="background:;">
+<slide class="lightbg" id="slide-22" style="background:;">
   <hgroup>
     <h2>Semi-open system - N uptake of benthic macrophytes insitu</h2>
   </hgroup>
@@ -449,7 +468,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue darkbg" id="slide-25" style="background:;">
+<slide class="segue darkbg" id="slide-23" style="background:;">
   <hgroup>
     <h2>Tracer specific terminology</h2>
   </hgroup>
@@ -458,7 +477,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-26" style="background:;">
+<slide class="lightbg" id="slide-24" style="background:;">
   <hgroup>
     <h2>Stable isotope-amount fraction or atom fraction (<em>x</em>)</h2>
   </hgroup>
@@ -478,7 +497,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-27" style="background:;">
+<slide class="lightbg" id="slide-25" style="background:;">
   <hgroup>
     <h2>Excess atom fraction, <em>x</em><sup>E</sup> (<sup><em>i</em></sup> E) ~P/reference</h2>
   </hgroup>
@@ -498,7 +517,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue darkbg" id="slide-28" style="background:;">
+<slide class="segue darkbg" id="slide-26" style="background:;">
   <hgroup>
     <h2>Where can I find some help?</h2>
   </hgroup>
@@ -507,7 +526,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-29" style="background:;">
+<slide class="lightbg" id="slide-27" style="background:;">
   <hgroup>
     <h2>Useful literature</h2>
   </hgroup>
@@ -525,7 +544,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-30" style="background:;">
+<slide class="lightbg" id="slide-28" style="background:;">
   <hgroup>
     <h2>Forums and web resources</h2>
   </hgroup>
@@ -534,7 +553,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-31" style="background:;">
+<slide class="lightbg" id="slide-29" style="background:;">
   <hgroup>
     <h2>Software tools</h2>
   </hgroup>
@@ -543,7 +562,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue darkbg" id="slide-32" style="background:;">
+<slide class="segue darkbg" id="slide-30" style="background:;">
   <hgroup>
     <h2>How do I calculate that?</h2>
   </hgroup>
@@ -552,7 +571,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-33" style="background:;">
+<slide class="lightbg" id="slide-31" style="background:;">
   <hgroup>
     <h2>Basic calculations</h2>
   </hgroup>
@@ -561,7 +580,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-34" style="background:;">
+<slide class="lightbg" id="slide-32" style="background:;">
   <hgroup>
     <h2>Using specific software packages</h2>
   </hgroup>
@@ -570,7 +589,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue darkbg" id="slide-35" style="background:;">
+<slide class="segue darkbg" id="slide-33" style="background:;">
   <hgroup>
     <h2>Design a stable isotope tracer experiment</h2>
   </hgroup>
@@ -579,7 +598,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-36" style="background:;">
+<slide class="lightbg" id="slide-34" style="background:;">
   <hgroup>
     <h2>Setting up the basic calculations</h2>
   </hgroup>
@@ -588,7 +607,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-37" style="background:;">
+<slide class="lightbg" id="slide-35" style="background:;">
   <hgroup>
     <h2>Calculating costs</h2>
   </hgroup>
@@ -597,7 +616,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="lightbg" id="slide-38" style="background:;">
+<slide class="lightbg" id="slide-36" style="background:;">
   <hgroup>
     <h2>Analysing results</h2>
   </hgroup>
@@ -612,55 +631,55 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Content'>
+        data-slide=1 title='Unit structure'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Aims'>
+        data-slide=2 title='Unit structure'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Assessment'>
+        data-slide=3 title='Outline'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Requirements'>
+        data-slide=4 title='When &#39;natural abundance&#39; is not enough...'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Outline'>
+        data-slide=5 title='Stable isotope tracers'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='When &#39;natural abundance&#39; is not enough...'>
+        data-slide=6 title='Stable isotope tracers'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Stable isotope tracers'>
+        data-slide=7 title='Tracing nutrient cycling - Whole ecosystem approaches'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Stable isotope tracers'>
+        data-slide=8 title='Tracing nutrient cycling - Cadiz Bay'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Tracing nutrient cycling - Whole ecosystem approaches'>
+        data-slide=9 title='Tracing nutrient cycling - Cadiz Bay'>
          9
       </a>
     </li>
@@ -684,43 +703,43 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Tracing nutrient cycling - Cadiz Bay'>
+        data-slide=13 title='Tracing nutrient cycling - Natural tracers'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Tracing nutrient cycling - Cadiz Bay'>
+        data-slide=14 title='Where to find material with a different isotopic compositions?'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Tracing nutrient cycling - Natural tracers'>
+        data-slide=15 title='Adding stable isotope tracers'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Where to find material with a different isotopic compositions?'>
+        data-slide=16 title='Questions?'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Adding stable isotope tracers'>
+        data-slide=17 title='Questions?'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Questions?'>
+        data-slide=18 title='Adding stable isotope tracers'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Questions?'>
+        data-slide=19 title='Adding stable isotope tracers'>
          19
       </a>
     </li>
@@ -732,110 +751,98 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Adding stable isotope tracers'>
+        data-slide=21 title='Semi-closed system - N uptake of benthic macrophytes in a flume-tank'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Adding stable isotope tracers'>
+        data-slide=22 title='Semi-open system - N uptake of benthic macrophytes insitu'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Semi-closed system - N uptake of benthic macrophytes in a flume-tank'>
+        data-slide=23 title='Tracer specific terminology'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Semi-open system - N uptake of benthic macrophytes insitu'>
+        data-slide=24 title='Stable isotope-amount fraction or atom fraction (<em>x</em>)'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Tracer specific terminology'>
+        data-slide=25 title='Excess atom fraction, <em>x</em><sup>E</sup> (<sup><em>i</em></sup> E) ~P/reference'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Stable isotope-amount fraction or atom fraction (<em>x</em>)'>
+        data-slide=26 title='Where can I find some help?'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Excess atom fraction, <em>x</em><sup>E</sup> (<sup><em>i</em></sup> E) ~P/reference'>
+        data-slide=27 title='Useful literature'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Where can I find some help?'>
+        data-slide=28 title='Forums and web resources'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Useful literature'>
+        data-slide=29 title='Software tools'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Forums and web resources'>
+        data-slide=30 title='How do I calculate that?'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Software tools'>
+        data-slide=31 title='Basic calculations'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='How do I calculate that?'>
+        data-slide=32 title='Using specific software packages'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Basic calculations'>
+        data-slide=33 title='Design a stable isotope tracer experiment'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Using specific software packages'>
+        data-slide=34 title='Setting up the basic calculations'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Design a stable isotope tracer experiment'>
+        data-slide=35 title='Calculating costs'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='Setting up the basic calculations'>
+        data-slide=36 title='Analysing results'>
          36
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='Calculating costs'>
-         37
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Analysing results'>
-         38
       </a>
     </li>
   </ul>
