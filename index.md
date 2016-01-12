@@ -137,21 +137,16 @@ Collecting samples of macrophyte biomass and suspended solids near effluent disc
 --- .lightbg &twocol
 ## Tracing nutrient cycling - Cadiz Bay
 
-*** {name: left, span: 6}
+*** {name: left, span: 5}
 
 Benthic macrophytes give an indication of N loading
 
-+ loading highest near discharges, deepest and high water velocity regions.
++ loading is highest near discharges, in the deepest and highest water velocity regions.
 
-*** {name: right, span: 6}
-<pw style="text-align:center";><img alt ="krigged_d15N_cadiz_bay_2006" src=assets/img/krigged_d15N_cadiz_bay_2006.png width=450px>
+*** {name: right, span: 7}
+<pw style="text-align:center";><img alt ="krigged_d15N_cadiz_bay_2006" src=assets/img/krigged_d15N_cadiz_bay_2006.png width=480px>
 <br>Morris EP., Peralta G., Benavente J., Freitas R., Rodrigues AM., Quintino V., Alvarez O., Valcárcel-Pérez N., Vergara JJ., Hernández I., Pérez-Lloréns JL. 2009. Caulerpa prolifera stable isotope ratios reveal anthropogenic nutrients within a tidal lagoon. Marine Ecology Progress Series 390:117–128, doi: [10.3354/meps08184](https://dx.doi.org/10.3354/meps08184).
 </pw>
-
---- .lightbg
-## Tracing nutrient cycling - Cadiz Bay
-
-![Morris_et_al_MEPS_2009_fig_]()
 
 --- .lightbg
 ## Tracing nutrient cycling - Natural tracers
@@ -164,19 +159,98 @@ Interpretting sources is complicated by overlapping, variable stable isotope val
     + Increase the difference in isotopic composition between source and sink.
 
 --- .lightbg
-## Where to find material with a different isotopic compositions?
+## Where to find material with different isotopic compositions?
 
 + 'Man-made' nitrogen from fertilizer production; &delta;^15 N  ~ 0.
 + Biologically transformed N from effluent; &delta;^15 N  > 5.
 + Plant carbon; photosynthetic fractionation gives &delta;^13 C values between ~ -7 and -35.
 + Laboratory grade enriched stable isotopes; range of compounds and enrichment available.
 
---- .lightbg
+--- .segue bg:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);
+## Questions?
+
+--- .segue .darkbg
 ## Adding stable isotope tracers
 
-+ Aim for a significantly different isotopic composition of the source, without a sig. different concentration (within 5 %).
-+ ^15 N relatively cheap.
-+ ^13 C relatively expensive.
+--- .lightbg
+## Golden rules of isotope addition experiments
+
++ Aim for a *significantly different isotopic composition of the source, without a sig. different concentration (within 5 %)*.
+    + ^15 N relatively cheap.
+    + ^13 C relatively expensive.
+
++ Take isotopic composition measurements of the medium (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.
+    + Measurements are ideal (take plenty of samples), however inert tracers can also be used to give a good indication.
+
++ Take isotopic composition measurements of the subject (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.    
+    + Take plenty of samples (ensure good representation of 'natural abundance').
+    + Consider non-linear sampling in time and space.
+
+--- .lightbg
+## Semi-closed systems
+
+Incubation chambers, flume-tank, mesocosms, pilot plants, lakes, ponds, inter-tidal sediments.
+
++ Add tracer to *initial medium* at start of experiment.
++ Measure or calculate isotopic composition of the source.
+    + Beware of changing concentration and isotopic composition of the source in time.
+    + Using an inert tracer (Uranine, Bromide, ect.) can help define the initial concentration of tracer in systems with unkown or variable volume.
+
+--- .lightbg
+## Semi-open systems
+
+Bays, rivers, estuaries, lakes, ponds, sub-tidal sediments, chemostat, pilot plants.
+
++ Add tracer to *inflow of medium* throughout experiment.
+    + Ensure tracer addition matches inflow.
++ Measure or calculate isotopic composition of the source.
+    + Use an inert tracer to aid calculations.
+    + Beware of changing concentration and isotopic composition of the source in space and time.
+
+--- .lightbg
+## Collecting samples
+
++ **Completely seperate all handling and processing of labelled and non-labelled samples!**
++ Collect and process samples in the same way as for measuring elemental composition.
+    + Take adequate steps to reduce cross-contamination; wash off excess medium, flush with 'clean' water, handle with gloves/tweezers.
+    + Biomass and suspended matter samples should be weighed and dried to constant weight (freeze dried or 48h @60ºC).
+       + Avoid high temperatures to avoid volatisation of C and N compounds.
+       + Store frozen or dried (should have minor changes in isotopic composition).
+    + Suspended material must be collected on inert filters; pre-combusted (4h @550ºC) or specially designed.    
+    + Water samples should be processed as soon as possible; add compound to stop biological activity.
+       + See [Sigman et al. 1997](www.sciencedirect.com/science/article/pii/S0304420397000091) and [Lehmann et al. 2001](http://pubs.acs.org/doi/abs/10.1021/ac010212u) for details of DIN extraction.
+
+--- .lightbg
+## Preparing samples for analysis
+
++ Consider if interfering compounds can/should be seperated/removed.
+    + Epiphytes on benthic macrophytes.
+    + Calcium carbonate in suspended matter and sediments affects 13C measurments.
+    + Mechanical and acid removal are options, although note there is a trade off as acidification may affect 15N values.
+
++ Ensure subject material is well mixed.
+    + Grind organic material to a fine powder.
+    + Assume material on filters represents a random sample.
+    
++ For material trapped on filters consider checking if filters are really inert.
+
+--- .lightbg
+## Preparing samples for analysis
+
++ Optionally send samples for further processing to a certified laboratory (at a cost) or prepare them yourself and send.
+    + Weigh (accuracy 0.001 mg) specified amount of sample and securely close in a specially designed 'tin combustion cup'.
+    + Talk to the lab who will do the analysis, *before preparing the sample*.
+    + Amount of material depends on the elemental content of the material.
+        + For example see [Colorado Plateau Stable Isotope Laboratory](http://www.isotope.nau.edu/submit.html)); ^15 N analysis of fresh plants (3% N content) 3.000 to 4.000 mg. 
+
+--- .lightbg
+## Preparing samples for analysis
+
++ **Not all labs will take labelled material!** Check possibilities and prices before starting experiment; expect to pay a little more for labelled material as it requires a different setup and excludes natural abundance measurements.
+
++ Finally, **shop around**; stable isotope samples travel well and are cheap to ship, hence look around for a lab that suits your price and turn-around time.
+    + [CPSIL Pricing](http://www.isotope.nau.edu/pricing.html)
+    + [Tarifas SAI-UTIA](https://www.sai.udc.es/es/unidades/UTIA)
 
 --- .segue bg:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);
 ## Questions?
@@ -201,37 +275,7 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
 </span>
 
 *** .hint
-Use the '5% rule' and the range of natural concentrations in aquatic systems. 
-
---- .lightbg
-## Adding stable isotope tracers
-
-+ Take isotopic composition measurements of the medium (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.
-    + measurements are ideal (take plenty of samples), however inert tracers can also be used to give a good indication.
-
-+ Take isotopic composition measurements of the subject (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.    
-    + take plenty of samples (ensure good representation of 'natural abundance')
-    + consider non-linear sampling in time and space.
-
---- .lightbg
-## Adding stable isotope tracers
-
-Semi-closed systems; incubation chambers, flume-tank, mesocosms, pilot plants, lakes, ponds, inter-tidal sediments.
-
-+ Add tracer to *initial medium* at start of experiment.
-+ Measure or calculate isotopic composition of the source.
-    + Beware of changing concentration and isotopic composition of the source in time. 
-
---- .lightbg
-## Adding stable isotope tracers
-
-Semi-open systems; bays, rivers, estuaries, lakes, ponds, sub-tidal sediments, chemostat, pilot plants.
-
-+ Add tracer to *inflow of medium* throughout experiment.
-    + Ensure tracer addition matches inflow.
-+ Measure or calculate isotopic composition of the source.
-    + Use inert tracer to aid calculations.
-    + Beware of changing concentration and isotopic composition of the source in space and time.
+Use the '5% rule' and the range of natural concentrations in aquatic systems.
 
 --- .lightbg
 ## Semi-closed system - N uptake of benthic macrophytes in a flume-tank
