@@ -1,0 +1,129 @@
+/* OUTER FRAME BG */
+body{
+  background: black;
+}
+
+/* TITLE PAGE */
+.title-slide {
+  background-color:#F0F0E0;
+  background-image: url(../img/eidemar-ceimar-background-1100px700px.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.title-slide hgroup h1 {
+  font-size: 60px;
+  line-height: 1.4;
+  letter-spacing: 0px;
+  color: #2F4F4F;
+  font-family: 'Fira Sans'
+}
+.title-slide hgroup h2 {
+  font-size: 30px;
+  color: darkgrey;
+  font-weight: inherit;
+  font-family: 'Fira Sans'
+}
+
+/* LOGO (adjust manually to logo size) */
+aside.gdbar {
+  height: 198px; /* 97 */
+  width: 480px; /* 215 */
+  left: -1px;
+  top: 100px;
+}
+aside.gdbar img {
+  width: 480px; /*85*/
+  height: 198px; /*85*/
+  position: absolute;
+  left: -25px;
+  margin: 20px 25px;
+}
+
+/* BASE SLIDES */
+.darkbg {
+  background-color:#e8f2f3;
+  background-image: url(../img/UCA-ceimar-background-dark-1100px700px.png) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.darkbg hgroup > h2  {
+color:#E6E6E6;
+}
+
+.darkbg article > p  {
+color:#E6E6E6;
+}
+
+.darkbg a  {
+color:#d97300;
+}
+
+
+.lightbg hgroup > h2  {
+color:#2F4F4F;
+}
+
+.lightbg article > p  {
+color:#2F4F4F;
+}
+
+.lightbg {
+  background-color:#e8f2f3;
+  background-image: url(../img/UCA-ceimar-background-light-1100px700px.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+}
+
+/* SECTION TITLE */
+slide.segue h2{
+ font-family: 'Fira Sans';
+ font-weight: 700;
+}
+
+/* BLOCK QUOTES */
+blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* TEXT WIKIPEDIA IMAGES */
+pw {
+    font-size: 50%;
+}
+
+/* IFRAME ONLY PART OF PAGE */
+#my-div
+{
+    width    : 1100px;
+    height   : 600px;
+    overflow : hidden;
+    position : relative;
+}
+
+#my-iframe
+{
+    position : absolute;
+    top      : -5940px;
+    left     : -180px;
+    width    : 100%;
+    height   : 6400px;
+}
+
+/* VARIABLE COL WIDTHS*/
+.leftcol {
+  float: left;
+  width: 48%;
+}
+.rightcol {
+  float: right;
+  width: 48%;
+}

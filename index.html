@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Stable Isotopes as Tracers</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Using Stable Isotopes as Tracers">
+  <meta name="author" content="Edward P. Morris (UCA-CEIMAR)">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="./assets/css/custom.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Using Stable Isotopes as Tracers</h1>
+    <h2>Use of stable isotopes in Marine Ecology, 11-15 Jan 2016, EIDEMAR.</h2>
+    <p>Edward P. Morris (UCA-CEIMAR)<br/>University of Cadiz</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="lightbg" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Content</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>duration: 3 h teaching session; 1.5 h theory, 1.5 h practice on PC</li>
+<li>audience: Msc., PhD students and post-docs</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Aims</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>introduce stable isotope tracer techniques</li>
+<li>provide important terminology specific to tracers</li>
+<li>give sources of important literature and help</li>
+<li>give tools for calculations</li>
+<li>ensure participants can design and analyse stable isotope tracer experiments</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Assessment</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>participation in mini excercises during teaching</li>
+<li>complete excercises on PC</li>
+<li>grading of students 1 page &#39;mock&#39; isotope tracer experiment (optional?)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Requirements</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>familiarity with general stable isotope terminology (see <a href="">lectures</a>)</li>
+<li>access to PC with <a href="https://cran.r-project.org">R</a> and <a href="https://www.rstudio.com/">Rstudio</a> (try and get Shiny server up and then just a web browser) </li>
+<li>a basic idea for a tracer experiment (optional)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Outline</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row'>
+  <div class='span6'>
+      <ul>
+<li>When natural abundance is not enough...
+
+<ul>
+<li>tracing nutrient cycling
+
+<ul>
+<li>biogeochemistry</li>
+<li>foodwebs</li>
+</ul></li>
+</ul></li>
+<li>Stable isotope tracer specific terminology</li>
+<li>Where can I find some help?
+
+<ul>
+<li>Important literature</li>
+<li>Forums, groups and software</li>
+</ul></li>
+</ul>
+
+  </div>
+  <div class='span6'>
+      <ul>
+<li>How do I calculate that?
+
+<ul>
+<li>Basic calculations</li>
+<li>Using specific software packages</li>
+</ul></li>
+<li>My &#39;first&#39; stable isotope tracer experimental design
+
+<ul>
+<li>Setting up the basic calculations</li>
+<li>Calculating costs</li>
+<li>Analysing results</li>
+</ul></li>
+</ul>
+
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue darkbg" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>When &#39;natural abundance&#39; is not enough...</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Material with a very different isotopic composition.</li>
+<li>Allows tracing of material through systems.</li>
+<li>Non-toxic and biodegradable.</li>
+<li>No special handling or specific permits needed.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Useful for examining the details of flows and processes, for example:</p>
+
+<ul>
+<li><sup>13</sup> C uptake and fractionation by different photosynthetic organisms.</li>
+<li>Nitrogen and carbon assimilation efficiency through food webs.</li>
+<li>Nitrification and denitrification in the water column and sediments.</li>
+<li>Whole ecosystem nutrient cycling; pelagic, benthic, wetlands, estuaries, rivers, lakes, aquaculture ponds, chemostats.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Whole ecosystem approaches</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>include one or two examples of whole ecosystem tracer experiments and the highlight unique findings. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae):</p>
+
+<ul>
+<li>What role do they play in nutrient cycling?</li>
+</ul>
+
+<p>[Cadiz bay benthic plant coverage]()</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Strong human influence in the region; plenty of N sources.</p>
+
+<ul>
+<li>Urban and aquaculture effluents are potential &#39;natural&#39; tracers.</li>
+</ul>
+
+<p>[Cadiz bay anthropogenic pressures]()</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Collecting samples of macrophyte biomass and suspended solids near effluent discharges allows tracing of long-term nutrient loading.</p>
+
+<p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Cadiz Bay</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>[Morris<em>et_al_MEPS_2009_fig</em>]()</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Tracing nutrient cycling - Natural tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Interpretting sources is complicated by overlapping, variable stable isotope values and the influence of biogeochemical processes.</p>
+
+<ul>
+<li>Using multiple isotopes may help.</li>
+<li>Test hypothesis with independant data sources.</li>
+<li>Test hypothesis with further experiments.
+
+<ul>
+<li>Increase the difference in isotopic composition between source and sink.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Where to find material with a different isotopic compositions?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>&#39;Man-made&#39; nitrogen from fertilizer production; &delta;<sup>15</sup> N  ~ 0.</li>
+<li>Biologically transformed N from effluent; &delta;<sup>15</sup> N  &gt; 5.</li>
+<li>Plant carbon; photosynthetic fractionation gives &delta;<sup>13</sup> C values between ~ -7 and -35.</li>
+<li>Laboratory grade enriched stable isotopes; range of compounds and enrichment available.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Adding stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Aim for a significantly different isotopic composition of the source, without a sig. different concentration (within 5 %).</li>
+<li><sup>15</sup> N relatively cheap.</li>
+<li><sup>13</sup> C relatively expensive.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue" id="slide-18" style="background:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);;">
+  <hgroup>
+    <h2>Questions?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Questions?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>The price of <sup>13</sup> C and <sup>15</sup> N tracers are both relatively similar per gram.</p>
+
+<ol>
+<li>What are the natural concentrations of dissolved inorganic carbon and nitrogen (DIC and DIN) in water?</li>
+<li>What is the approximate maximum amount of DIC and DIN tracer that can be added to the system?</li>
+<li>Can  you explain why the costs of using each are so different?</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <ol>
+<li><p><span class='answer'>
+The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/m3) is about 2 orders of magnitude higher than dissolved inorganic nitrogen (DIN, 1 - 100 mmol/m3).
+</span></p></li>
+<li><p><span class='answer'> Applying the 5% rule, we can estimate that the maximum tracer to be used is 20 x 0.05 = 1 mmol/m3 or ~ 14 mg/m3 of DIN and 2000 * 0.05 = 100 mmol/m3 or 1200 mg/m3 of DIC.
+</span></p></li>
+<li><p><span class='answer'> Allot more DIC tracer is required to &#39;increase the difference in isotopic composition between source and sink&#39;.
+</span></p></li>
+</ol>
+
+</div>
+<div class="quiz-hint">
+  <p>Use the &#39;5% rule&#39; and the range of natural concentrations in aquatic systems. </p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Adding stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Take isotopic composition measurements of the medium (i.e, water, biomass, DIN, DIC), <em>before</em> and <em>after</em> tracer addition.</p>
+
+<ul>
+<li>measurements are ideal (take plenty of samples), however inert tracers can also be used to give a good indication.</li>
+</ul></li>
+<li><p>Take isotopic composition measurements of the subject (i.e, water, biomass, DIN, DIC), <em>before</em> and <em>after</em> tracer addition.    </p>
+
+<ul>
+<li>take plenty of samples (ensure good representation of &#39;natural abundance&#39;)</li>
+<li>consider non-linear sampling in time and space.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Adding stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Semi-closed systems; incubation chambers, flume-tank, mesocosms, pilot plants, lakes, ponds, inter-tidal sediments.</p>
+
+<ul>
+<li>Add tracer to <em>initial medium</em> at start of experiment.</li>
+<li>Measure or calculate isotopic composition of the source.
+
+<ul>
+<li>Beware of changing concentration and isotopic composition of the source in time. </li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Adding stable isotope tracers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Semi-open systems; bays, rivers, estuaries, lakes, ponds, sub-tidal sediments, chemostat, pilot plants.</p>
+
+<ul>
+<li>Add tracer to <em>inflow of medium</em> throughout experiment.
+
+<ul>
+<li>Ensure tracer addition matches inflow.</li>
+</ul></li>
+<li>Measure or calculate isotopic composition of the source.
+
+<ul>
+<li>Use inert tracer to aid calculations.</li>
+<li>Beware of changing concentration and isotopic composition of the source in space and time.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Semi-closed system - N uptake of benthic macrophytes in a flume-tank</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Semi-open system - N uptake of benthic macrophytes insitu</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue darkbg" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Tracer specific terminology</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Stable isotope-amount fraction or atom fraction (<em>x</em>)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Previously called &#39;AP&#39;, &#39;Atom %&#39;.</p>
+
+<blockquote>
+<p>Amount of a specified atom (isotope) (<em>n</em>) of a chemical element (E) divided by the total amount of atoms of the element within the mixture (P).</p>
+
+<p>\[x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } = n ( ^{i} \mathrm{E} ) _{\mathrm{P}} / Σ n ( ^{k} \mathrm{E}) _{ \mathrm{P}}\]</p>
+</blockquote>
+
+<p>For example, the <sup>15</sup> N fraction, <em>x</em>(<sup>15</sup> N), of dissolved inorganic nitrogen was <em>x</em>(<sup>15</sup> N) ~DIN~ = 98 %.</p>
+
+<p>For a full overview see @coplen_guidelines_2011.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Excess atom fraction, <em>x</em><sup>E</sup> (<sup><em>i</em></sup> E) ~P/reference</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Also called excess (stable) isotope-amount fraction, previously &#39;atom percent excess&#39;, &#39;atom % excess&#39; or &#39;APE&#39;.</p>
+
+<blockquote>
+<p>Difference between the <em>mole fraction</em> of an isotope <sup><em>i</em></sup> E of element E in substance P and that of a reference. The superscript E signifies an excess quantity.</p>
+
+<p>\[x ^{\mathrm{E}} ( ^{i} \mathrm{E} _{\mathrm{P/reference}} = x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } - x ( ^{i} \mathrm{E} ) _{ \mathrm{reference} }\]</p>
+</blockquote>
+
+<p>For example, the excess atom fraction of plant above-ground biomass (AGB) compared to the reference atom fraction of dissolved inorganic nitrogen (<em>x</em>(<sup>15</sup> N) ~DIN),  <em>x</em> <sup>E</sup> (<sup>15</sup> N) ~AGB/DIN = 10 %.</p>
+
+<p>For a full overview see @coplen_guidelines_2011.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue darkbg" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Where can I find some help?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Useful literature</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Books</h3>
+
+<p>Stable Isotope Ecology (2006). B. Fry. Springer, New York. ISBN: 0387305130</p>
+
+<p>Stable Isotope Geochemistry (2009). Jochen Hoefs. Springer, New York. ISBN: 978-3-540-70708-0 (Online)</p>
+
+<p>Theory and application of tracers (1993). D. S. Schimel. Academic press Inc., London. ISBN: 0126246505</p>
+
+<p>Stable isotopes in ecology and environmental science (1994). K. Lajtha &amp; R. H. Michener. Blackwell scientific publications, Oxford. ISBN: 0632031549</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Forums and web resources</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Software tools</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue darkbg" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>How do I calculate that?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Basic calculations</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>Using specific software packages</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="segue darkbg" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Design a stable isotope tracer experiment</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Setting up the basic calculations</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Calculating costs</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="lightbg" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Analysing results</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Content'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Aims'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Assessment'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Requirements'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Outline'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='When &#39;natural abundance&#39; is not enough...'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Stable isotope tracers'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Stable isotope tracers'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Tracing nutrient cycling - Whole ecosystem approaches'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Tracing nutrient cycling - Cadiz Bay'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Tracing nutrient cycling - Cadiz Bay'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Tracing nutrient cycling - Cadiz Bay'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Tracing nutrient cycling - Cadiz Bay'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Tracing nutrient cycling - Cadiz Bay'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Tracing nutrient cycling - Natural tracers'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Where to find material with a different isotopic compositions?'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Adding stable isotope tracers'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Questions?'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Questions?'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Adding stable isotope tracers'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Adding stable isotope tracers'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Adding stable isotope tracers'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Semi-closed system - N uptake of benthic macrophytes in a flume-tank'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Semi-open system - N uptake of benthic macrophytes insitu'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Tracer specific terminology'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Stable isotope-amount fraction or atom fraction (<em>x</em>)'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Excess atom fraction, <em>x</em><sup>E</sup> (<sup><em>i</em></sup> E) ~P/reference'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Where can I find some help?'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Useful literature'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Forums and web resources'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Software tools'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='How do I calculate that?'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Basic calculations'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Using specific software packages'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Design a stable isotope tracer experiment'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Setting up the basic calculations'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Calculating costs'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Analysing results'>
+         38
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
