@@ -3,7 +3,7 @@ title       : "Using Stable Isotopes as Tracers"
 subtitle    : "Use of stable isotopes in Marine Ecology, 11-15 Jan 2016, EIDEMAR."
 author      : "Edward P. Morris (UCA-CEIMAR)"
 job         : "University of Cadiz"
-date        : "2016-01-12"
+date        : "2016-01-13"
 bibliography: "bibliography.bib"
 #logo       : UCA-ceimar-logo-480-198-transparent.png # not used
 #biglogo    : 
@@ -13,12 +13,11 @@ hitheme     : tomorrow      #
 widgets     : [mathjax, quiz, bootstrap, interactive]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-font-import : 'https://fonts.googleapis.com/css?family=Fira+Sans'
+font-import : 'https://fonts.googleapis.com/css?family=Fira+Sans:400,700,500&subset=latin,greek'
 font-family : 'Fira Sans'
 
 --- .lightbg
 ## Unit structure
-
 ### Content
 + duration: 3 h teaching session; 1.5 h theory, 1.5 h practice on PC
 + audience: Msc., PhD students and post-docs
@@ -35,40 +34,14 @@ font-family : 'Fira Sans'
 ## Unit structure
 ### Assessment
 
-+ participation in mini excercises during teaching
-+ complete excercises on PC
-+ grading of students 1 page 'mock' isotope tracer experiment (optional?)
++ Participation in mini excercises during teaching.
++ Grading of students 1-2 page 'mock' isotope tracer experiment (optional?).
 
 ### Requirements
 
-+ familiarity with general stable isotope terminology (see [lectures](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19911))
-+ access to PC with [R](https://cran.r-project.org) and [Rstudio](https://www.rstudio.com/) (try and get Shiny server up and then just a web browser) 
-+ a basic idea for a tracer experiment (optional)
-
---- &twocol .lightbg
-## Outline
-
-*** {name: left, span: 6}
-
-When natural abundance is not enough...
-  + tracing nutrient cycling
-
-Stable isotope tracer specific terminology
-
-Where can I find some help?
-  + Important literature
-  + Forums, groups and software
-
-*** {name: right, span: 6}
-
-How do I calculate that?
-  + Basic calculations
-  + Using specific software packages
-
-Design a stable isotope tracer experiment
-  + Setting up the basic calculations
-  + Calculating costs
-  + Analysing results
++ Familiarity with general stable isotope terminology (see [lectures](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19911)).
++ Access to PC with [R](https://cran.r-project.org) and [Rstudio](https://www.rstudio.com/).
++ A basic idea for a tracer experiment (optional).
 
 --- .segue .darkbg
 ## When 'natural abundance' is not enough...
@@ -97,18 +70,21 @@ Useful for examining the details of flows and processes, for example:
 + Nitrogen and carbon assimilation efficiency through food webs (see [lecture](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19910)).
 + Nitrification and denitrification in the water column and sediments (see [article](https://av02-ext.uca.es/moodle/mod/resource/view.php?id=19994)).
 + Whole ecosystem nutrient cycling; pelagic, benthic, wetlands, estuaries, rivers, lakes, aquaculture ponds, chemostats.
+    + Gribsholt, B. et al. Nitrogen processing in a tidal freshwater marsh: A whole ecosystem 15N labeling study. Limnol. Oceanogr. 50, 1945 – 1959 (2005).
+    + Hamilton, S. K. et al. Nitrogen uptake and transformation in a midwestern US stream: a stable isotope enrichment study. Biogeochemistry 54, 297–340 (2001).
+    + Ashkenas, L. R., Johnson, S. L., Gregory, S. V., Tank, J. L. & Wollheim, W. M. A stable isotope tracer study of nitrogen uptake and transformation in an old-growth forest stream. (2008).
 
---- .lightbg
-## Tracing nutrient cycling - Whole ecosystem approaches
 
-include one or two examples of whole ecosystem tracer experiments and the highlight unique findings. 
 
---- .lightbg
+
+--- .lightbg &twocol
 ## Tracing nutrient cycling - Cadiz Bay
 
+*** {name: left, span: 4}
 ~90% of Cadiz inner bay is covered in benthic plants (angiosperms and algae).
 
-<pw style="text-align:center;"><img alt ="Cadiz_Inner_Bay_Macrofitos" src=assets/img/Cadiz_Inner_Bay_Macrofitos.png width=650px>
+*** {name: right, span: 8}
+<pw style="text-align:center;"><img alt ="Cadiz_Inner_Bay_Macrofitos" src=assets/img/Cadiz_Inner_Bay_Macrofitos.png width=700px>
 <br>Morris et al., FUNDIV, Regional government of Andalucia project of excellence P07-RNM- 2516.</pw>
 
 --- .lightbg &twocol
@@ -169,43 +145,133 @@ Interpretting sources is complicated by overlapping, variable stable isotope val
 --- .segue bg:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);
 ## Questions?
 
+--- .lightbg &submitcompare1
+## Questions?
+Interpretting natural abundance stable isotope values can be tricky, particularily if there is more than one source. What are some of the processes that may affect the stable isotope composition of N in natural ecosystems?
+
+*** .explanation
+<span class='answer'>
+Nitrification, denitrification, ammonia uptake, assimilation (trophic enrichment).
+</span>
+
 --- .segue .darkbg
 ## Adding stable isotope tracers
 
 --- .lightbg
 ## Golden rules of isotope addition experiments
 
-+ Aim for a *significantly different isotopic composition of the source, without a sig. different concentration (within 5 %)*.
-    + ^15 N relatively cheap.
-    + ^13 C relatively expensive.
++ Aim for a **significantly different isotopic composition of the source, without a sig. different concentration (within 5 %).**
+    + ^15 N relatively cheap, ^13 C relatively expensive.
 
-+ Take isotopic composition measurements of the medium (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.
++ Take isotopic composition measurements of the **medium** (i.e, water, biomass, DIN, DIC), **before** and **after** tracer addition.
     + Measurements are ideal (take plenty of samples), however inert tracers can also be used to give a good indication.
 
-+ Take isotopic composition measurements of the subject (i.e, water, biomass, DIN, DIC), *before* and *after* tracer addition.    
++ Take isotopic composition measurements of the **subject** (i.e, water, biomass, DIN, DIC), **before** and **after** tracer addition.    
     + Take plenty of samples (ensure good representation of 'natural abundance').
     + Consider non-linear sampling in time and space.
 
 --- .lightbg
 ## Semi-closed systems
 
+<div class="alert alert-info">
 Incubation chambers, flume-tank, mesocosms, pilot plants, lakes, ponds, inter-tidal sediments.
+</div>
 
-+ Add tracer to *initial medium* at start of experiment.
++ Add tracer to **initial medium** at start of experiment.
 + Measure or calculate isotopic composition of the source.
     + Beware of changing concentration and isotopic composition of the source in time.
     + Using an inert tracer (Uranine, Bromide, ect.) can help define the initial concentration of tracer in systems with unkown or variable volume.
 
+--- .lightbg &twocol
+## Semi-closed system - N uptake of benthic macrophytes in a flume-tank
+
+*** {name: "left", span: "5"}
+
++ Plants incubated in a large flume tank
++ ^15 NH~4 to tank, mixed and then replicate plants added
++ DIN monitored and new plants used for different water velocities
+
+*** {name: "right", span: "7"}
+<pw style="text-align:center";><img alt ="flume_uptake_morris_et_al_2008" src=assets/img/flume_uptake_morris_et_al_2008.png width=600px>
+<br>Morris, E. P., G. Peralta, F. G. Brun, L. Van Duren, T. J. Bouma, and J. L. Perez-Llorens. 2008. Interaction between hydrodynamics and seagrass canopy structure: Spatially explicit effects on ammonium uptake rates. Limnol. Oceanogr. 53: 1531–1539. DOI: [10.4319/lo.2008.53.4.1531](https://dx.doi.org/10.4319/lo.2008.53.4.1531)</pw>
+
+--- .lightbg &twocol
+## Semi-closed system - N uptake of benthic macrophytes in a flume-tank
+
+*** {name: "left", span: "6"}
+
++ Flume tank allows effects of velocity and canopy structure on uptake to be examined.
++ 'Isotope dilution' potential issue with natural canopies and sediments.
++ Always remember to do 'control' measurements, i.e., no velocity.
++ Consider using the labelled canopy for other experiments...
+
+*** {name: "right", span: "6"}
+<pw style="text-align:center";><img alt ="fig3_morris_et_al_LO_2008" src=assets/img/fig3_morris_et_al_LO_2008.png width=500px>
+<br>Morris, E. P., G. Peralta, F. G. Brun, L. Van Duren, T. J. Bouma, and J. L. Perez-Llorens. 2008. Interaction between hydrodynamics and seagrass canopy structure: Spatially explicit effects on ammonium uptake rates. Limnol. Oceanogr. 53: 1531–1539. DOI: [10.4319/lo.2008.53.4.1531](https://dx.doi.org/10.4319/lo.2008.53.4.1531)</pw>
+
 --- .lightbg
 ## Semi-open systems
 
-Bays, rivers, estuaries, lakes, ponds, sub-tidal sediments, chemostat, pilot plants.
+<div class="alert alert-info">
+  Bays, rivers, estuaries, lakes, ponds, sub-tidal sediments, chemostat, pilot plants.
+</div>
 
-+ Add tracer to *inflow of medium* throughout experiment.
++ Add tracer to **inflow of medium** throughout experiment.
     + Ensure tracer addition matches inflow.
 + Measure or calculate isotopic composition of the source.
     + Use an inert tracer to aid calculations.
     + Beware of changing concentration and isotopic composition of the source in space and time.
+
+--- .segue bg:url(assets/img/insitu_15N_labelling.png) background-size:fit
+## Semi-open system - N uptake of benthic macrophytes insitu
+
+--- .lightbg &twocol
+## Semi-open system - N uptake of benthic macrophytes insitu
+
+*** {name: "left", span: "4"}
+
++ Insitu tracer delivery system during tidal flow.
++ Uranine used to estimate tracer concntration.
++ Biomass samples collected before and after labelling.
+    + Get plenty of natural abundance samples.
+
+*** {name: "right", span: "8"}
+<pw style="text-align:center";><img alt ="fig2_morris_et_al_LOFE_2013" src=assets/img/fig2_morris_et_al_LOFE_2013.png width=700px>
+<br>1.Morris, E. P. et al. The role of hydrodynamics in structuring in situ ammonium uptake within a submerged macrophyte community. Limnology & Oceanography: Fluids & Environments 3, 210–224 (2013).
+. DOI: [10.1215/21573689-2397024](https://dx.doi.org/10.1215/21573689-2397024)</pw>
+
+--- .lightbg &twocol
+## Semi-open system - N uptake of benthic macrophytes insitu
+
+*** {name: "left", span: "6"}
+
++ Allows uptake of natural communities under realistic conditions to be examined.  
++ 'Isotope dilution' potential issue with natural canopies and sediments.
++ Use models to predict tracer distribution and design accordingly. 
++ Consider using the labelled canopy for other experiments...
+
+*** {name: "right", span: "6"}
+<pw style="text-align:center";><img alt ="fig7_morris_et_al_LOFE_2013" src=assets/img/fig7_morris_et_al_LOFE_2013.png width=410px>
+<br>Morris, E. P. et al. The role of hydrodynamics in structuring in situ ammonium uptake within a submerged macrophyte community. Limnology & Oceanography: Fluids & Environments 3, 210–224 (2013). DOI: [10.1215/21573689-2397024](https://dx.doi.org/10.1215/21573689-2397024)</pw>
+
+--- .segue bg:url(assets/img/questions-UCA-ceimar-background-dark-1100px700px.png);
+## Questions?
+
+--- .lightbg &submitcompare1
+## Questions?
+Isotope dilution can be an issue, particularily for closed systems or where there are highly active sediments. What is isotope dilution and what practical steps can be taken to avoid it?
+
+*** .explanation
+<span class='answer'>
+**Isotope dilution is the change in atom fraction of the source pool with time**, which can lead to errors in uptake calculations. 
+
+It is caused both by selective removal and import to the source pool (i.e., DIN). For example selective uptake of ammonium or release from biota.
+
+Measuring the actual isotope composition of the source pool allows corrections to to be made. Reducing the length of incubations also helps.
+
+<pw style="text-align:center";><img alt ="fig1_glibert_et_al_LO_1982" src=assets/img/fig1_glibert_et_al_LO_1982.png width=500px>
+<br>Glibert, P. M., Lipschultz, F., McCarthy, J. J. & Altabet, M. A. Isotope dilution models of uptake and remineralization of ammonium by marine plankton. Limnol. Oceanogr. 27, 639–650 (1982).</pw>
+</span>
 
 --- .lightbg
 ## Collecting samples
@@ -277,19 +343,11 @@ The concentration of dissolved inorganic carbon in water (DIC, 1000 - 4000 mmol/
 *** .hint
 Use the '5% rule' and the range of natural concentrations in aquatic systems.
 
---- .lightbg
-## Semi-closed system - N uptake of benthic macrophytes in a flume-tank
-
---- .lightbg
-## Semi-open system - N uptake of benthic macrophytes insitu
-
-
-
 --- .segue .darkbg
-## Tracer specific terminology
+## Tracer specific terminology and calculations
 
 --- .lightbg
-## Stable isotope-amount fraction or atom fraction (*x*)
+## Stable isotope-amount fraction or atom fraction
 
 Previously called 'AP', 'Atom %'.
 
@@ -297,22 +355,47 @@ Previously called 'AP', 'Atom %'.
 
 > $$x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } = n ( ^{i} \mathrm{E} ) _{\mathrm{P}} / Σ n ( ^{k} \mathrm{E}) _{ \mathrm{P}}$$
 
-For example, the ^15 N fraction, *x*(^15 N), of dissolved inorganic nitrogen was *x*(^15 N) ~DIN~ = 98 %.
+For example, the $^{15}\mathrm{N}$ fraction, $x(^{15}\mathrm{N})$, of dissolved inorganic nitrogen was $x(^{15}\mathrm{N})_{\mathrm{DIN}}$ = 98 %.
 
 For a full overview see @coplen_guidelines_2011.
 
 --- .lightbg
-## Excess atom fraction, *x*^E (^*i* E) ~P/reference
+## Mixing calculations
+
+> Calculating the atom fraction of the mixture (P) of a tracer (T) and a medium (M).
+
+> $$n ( ^{i} \mathrm{E} ) _{ \mathrm{P} } = n ( ^{i} \mathrm{E} ) _{ \mathrm{T}} + n ( ^{i} \mathrm{E} ) _{ \mathrm{M} }$$
+
+> $$n ( \mathrm{E} ) _{ \mathrm{P} } = n ( \mathrm{E} ) _{ \mathrm{T} } + n ( \mathrm{E} ) _{ \mathrm{M} }$$
+
+> $$x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } = n ( ^{i} \mathrm{E} ) _{\mathrm{P}} / n ( \mathrm{E}) _{ \mathrm{P}}$$
+
+
+--- .lightbg
+## Excess atom fraction
 
 Also called excess (stable) isotope-amount fraction, previously 'atom percent excess', 'atom % excess' or 'APE'.
 
 > Difference between the *mole fraction* of an isotope ^*i* E of element E in substance P and that of a reference. The superscript E signifies an excess quantity.
 
-> $$x ^{\mathrm{E}} ( ^{i} \mathrm{E} _{\mathrm{P/reference}} = x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } - x ( ^{i} \mathrm{E} ) _{ \mathrm{reference} }$$
+> $$x ^{\mathrm{E}} ( ^{i} \mathrm{E} ) _{\mathrm{P/reference}} = x ( ^{i} \mathrm{E} ) _{ \mathrm{P} } - x ( ^{i} \mathrm{E} ) _{ \mathrm{reference} }$$
 
-For example, the excess atom fraction of plant above-ground biomass (AGB) compared to the reference atom fraction of dissolved inorganic nitrogen (*x*(^15 N) ~DIN),  *x* ^E (^15 N) ~AGB/DIN = 10 %.
+For example, the excess atom fraction of plant above-ground biomass (AGB) compared to the reference atom fraction of dissolved inorganic nitrogen,  $x ^{\mathrm{E}} ( ^{15} \mathrm{N} ) _{\mathrm{AGB/DIN}}$ = 10 %.
 
 For a full overview see @coplen_guidelines_2011.
+
+--- .lightbg
+## Uptake calculations
+
+> Calculating specific uptake rate of the element (E) using the atom fraction of the 'source pool' mixture (P), sample excess atom fraction compared to the reference atom fraction of source pool (S/P), time of incubation (*t*) and biomass-specific element content (c).
+
+> $$V ( \mathrm{E} ) _{ \mathrm{S} } = 
+\frac{ 
+x ^{\mathrm{E}} ( ^{i} \mathrm{E} ) _{\mathrm{S/P}}
+}{
+x ( ^{i} \mathrm{E} ) _{\mathrm{P}} \times t
+} \times c ( \mathrm{E} ) _{\mathrm{S}}$$
+
 
 --- .segue .darkbg
 ## Where can I find some help?
@@ -331,19 +414,15 @@ Theory and application of tracers (1993). D. S. Schimel. Academic press Inc., Lo
 Stable isotopes in ecology and environmental science (1994). K. Lajtha & R. H. Michener. Blackwell scientific publications, Oxford. ISBN: 0632031549
 
 --- .lightbg
-## Forums and web resources
+### Forums and web resources
 
---- .lightbg
-## Software tools
+[ISOGEOCHEM](https://isogeochem.wikispaces.com/): An E-mail Discussion List and Reference Web Site for Stable Isotope Geochemistry
 
---- .segue .darkbg
-## How do I calculate that?
+### Software tools
 
---- .lightbg
-## Basic calculations
+[marelac: Tools for Aquatic Sciences](https://cran.r-project.org/web/packages/marelac/index.html)
 
---- .lightbg
-## Using specific software packages
+[seacarb: Seawater Carbonate Chemistry](https://cran.r-project.org/web/packages/seacarb/index.html)
 
 --- .segue .darkbg
 ## Design a stable isotope tracer experiment
@@ -351,11 +430,18 @@ Stable isotopes in ecology and environmental science (1994). K. Lajtha & R. H. M
 --- .lightbg
 ## Setting up the basic calculations
 
---- .lightbg
-## Calculating costs
++ What element and range of concentration in system of interest?
++ Calculate amount of element required to increase concentration by 5%.
++ Calculate the 'maximum' cost of tracer, is it feasible?
++ Find natural abundance atom fraction values of subject; via datasets, literature and/or pilot study.
+    + Extract mean and standard deviation.
++ Model uptake and calculate change in atom fraction required to be significantly different to natural abundance. What happens when the uptake rate and time are adjusted? What about the number of replicates?
 
 --- .lightbg
 ## Analysing results
 
-
-
++ Convert all results to SI units (fraction rather than percent, mols ect.)
++ Calculate atom fraction of source pool mixture; either via an assumption of mixing, using an inert tracer or via measurement.
++ Test if atom fraction of reference and samples are sig different.
++ Calculate excess atom fraction of samples that are significantly different.
++ Calculate uptake.

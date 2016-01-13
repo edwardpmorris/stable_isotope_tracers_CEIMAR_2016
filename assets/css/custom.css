@@ -18,6 +18,7 @@ body{
   letter-spacing: 0px;
   color: #2F4F4F;
   font-family: 'Fira Sans'
+  font-weight: 700;
 }
 .title-slide hgroup h2 {
   font-size: 30px;
@@ -84,6 +85,7 @@ color:#2F4F4F;
 slide.segue h2{
  font-family: 'Fira Sans';
  font-weight: 700;
+ line-height: 1.4;
 }
 
 /* BLOCK QUOTES */
@@ -98,6 +100,7 @@ blockquote {
 /* TEXT WIKIPEDIA IMAGES */
 pw {
     font-size: 50%;
+    line-height: 0;
 }
 
 /* IFRAME ONLY PART OF PAGE */
@@ -126,4 +129,17 @@ pw {
 .rightcol {
   float: right;
   width: 48%;
+}
+
+/* bootstrap boxes */
+.alert-info {
+    color: #31708F;
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
